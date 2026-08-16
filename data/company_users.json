@@ -1,0 +1,4 @@
+[
+  {"_id":{"$oid":"66e000000000000000000011"},"name":"NPN Admin","email":"admin@npn.demo","password":"password123","role":"admin","team":"Customer Support & General","created_at":{"$date":"2026-08-01T00:00:00Z"}},
+  {"_id":{"$oid":"66e000000000000000000012"},"name":"Support Agent","email":"support@npn.demo","password":"password123","role":"agent","team":"Service & Technical Support","created_at":{"$date":"2026-08-01T00:00:00Z"}}
+]

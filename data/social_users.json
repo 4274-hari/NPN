@@ -1,0 +1,6 @@
+[
+  {"_id":{"$oid":"66e000000000000000000001"},"name":"Nikhil Rao","email":"nikhil@npn.demo","handle":"@nikhil","password":"password123","platform":"X / Twitter","color":"orange","created_at":{"$date":"2026-08-01T00:00:00Z"}},
+  {"_id":{"$oid":"66e000000000000000000002"},"name":"Nandha Kumar","email":"nandha@npn.demo","handle":"@nandha","password":"password123","platform":"X / Twitter","color":"blue","created_at":{"$date":"2026-08-01T00:00:00Z"}},
+  {"_id":{"$oid":"66e000000000000000000003"},"name":"Neha Sharma","email":"neha@npn.demo","handle":"@neha","password":"password123","platform":"X / Twitter","color":"coral","created_at":{"$date":"2026-08-01T00:00:00Z"}},
+  {"_id":{"$oid":"66e000000000000000000004"},"name":"Arjun Mehta","email":"arjun@npn.demo","handle":"@arjun","password":"password123","platform":"X / Twitter","color":"green","created_at":{"$date":"2026-08-01T00:00:00Z"}}
+]

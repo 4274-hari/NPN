@@ -1,0 +1,2 @@
+model,accuracy,precision_macro,recall_macro,f1_macro,training_samples,test_samples
+Linear SVM,0.9362483755103711,0.9254846854709837,0.9244424849425252,0.9242537853043965,390891,97723

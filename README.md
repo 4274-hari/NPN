@@ -1,27 +1,16 @@
-# NPN Social Copilot - Base
+# NPN Social Copilot
 
-React frontend, FastAPI backend, and MongoDB connection base. Your `models`, `rag`, and `llm` files stay separate from this server foundation.
+React frontend, FastAPI backend, and MongoDB connection base.
 
-## Prerequisites
-
-- Node.js 18+
-- Python 3.11+
-- A running MongoDB instance (local or Atlas)
-
-## Start the backend
+## Start
 
 ```powershell
 cd backend
-Copy-Item .env.example .env
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
-
-Confirm it at `http://localhost:8000/health` and open interactive API docs at `http://localhost:8000/docs`.
-
-## Start the frontend
 
 In another terminal:
 
@@ -31,12 +20,15 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173`.
+## Demo users database
 
-## Layout
+Registration is intentionally disabled. Import these supplied files into MongoDB before logging in. They contain plain-text demo passwords, so only use them for local demonstrations.
 
-- `frontend/` - React + Vite application.
-- `backend/main.py` - FastAPI application, CORS, and API endpoints.
-- `backend/config.py` - environment settings.
-- `backend/database.py` - MongoDB connection helpers.
-- `models/`, `rag/`, `llm/` - keep your ML/RAG/LLM files separate; add routes that call them when ready.
+```powershell
+mongoimport --uri "mongodb://localhost:27017" --db npn_social_clone --collection social_users --jsonArray --file data/social_users.json
+mongoimport --uri "mongodb://localhost:27017" --db npn_social_copilot --collection company_users --jsonArray --file data/company_users.json
+```
+
+Social login: `@nikhil`, `@nandha`, `@neha`, or `@arjun` (password: `password123`).
+
+Company login: `admin@npn.demo` or `support@npn.demo` (password: `password123`).

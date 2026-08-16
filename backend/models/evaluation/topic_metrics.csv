@@ -1,0 +1,2 @@
+model,validation_accuracy,validation_precision_macro,validation_recall_macro,validation_f1_macro,test_accuracy,test_precision_macro,test_recall_macro,test_f1_macro,training_samples,validation_samples,test_samples
+Linear SVM,0.8917676614305827,0.9174349228434484,0.8767576529815794,0.8951583967922683,0.8921817629682798,0.917793990556462,0.8771941657613244,0.8952709687422523,338081,72446,72446
