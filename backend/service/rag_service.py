@@ -59,7 +59,7 @@ Recent conversation context (use only when it is relevant):
 
 Do not mention classifiers, RAG, internal policies, teams, or documents. Do not invent facts, promise an outcome not supported by the guidance, request secrets, or expose sensitive information."""
     response = Groq(api_key=settings.groq_api_key).chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="openai/gpt-oss-20b",
         messages=[{"role": "system", "content": "Return only the customer-facing reply."}, {"role": "user", "content": prompt}],
         temperature=0.2,
         max_tokens=200,

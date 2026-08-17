@@ -10,7 +10,7 @@ from pymongo import ReturnDocument
 
 from config import settings
 from database import close_mongo_connection, connect_to_mongo, get_database, get_social_database
-from service.model_service import classify_text
+from service.hybrid_classifier import hybrid_classify
 from service.emoji_service import clean_text
 from service.auth_service import new_session_token
 from service.routing_service import TOPIC_TEAMS, route_topic_to_team
@@ -126,7 +126,7 @@ async def process_company_mention(request: MentionRequest, social_tweet_id: Obje
     )
 
     cleaned_text = clean_text(request.text)
-    classification = classify_text(cleaned_text)
+    classification = hybrid_classify(cleaned_text)
     labels = labels_from_classification(classification)
     requires_human = classification["escalation"]["escalation"] is True or classification["escalation"]["escalation"] == "review"
     if requires_human:
