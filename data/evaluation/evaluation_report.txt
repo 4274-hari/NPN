@@ -1,0 +1,135 @@
+================================================================================
+LINEAR SVM - SENTIMENT ANALYSIS PIPELINE - EVALUATION REPORT
+================================================================================
+Generated: 2026-08-16 16:06:05
+Algorithm: LinearSVC (One-vs-Rest Multi-class)
+Max Iterations: 2000
+Loss: Squared Hinge
+Kernel: Linear
+
+
+================================================================================
+MODEL: INTENT
+================================================================================
+Accuracy:  0.9429
+Precision: 0.9447
+Recall:    0.9429
+F1-Score:  0.9434
+
+Best C: 0.5
+Best class_weight: None
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   complaint       0.99      0.97      0.98     42951
+       other       0.85      0.93      0.89     20174
+      praise       0.99      0.98      0.98     20609
+       query       0.89      0.86      0.87     16266
+
+    accuracy                           0.94    100000
+   macro avg       0.93      0.93      0.93    100000
+weighted avg       0.94      0.94      0.94    100000
+
+
+================================================================================
+MODEL: SENTIMENT
+================================================================================
+Accuracy:  0.9792
+Precision: 0.9795
+Recall:    0.9792
+F1-Score:  0.9792
+
+Best C: 1.0
+Best class_weight: None
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    negative       0.99      0.97      0.98     42951
+     neutral       0.96      0.99      0.97     36440
+    positive       0.99      0.98      0.98     20609
+
+    accuracy                           0.98    100000
+   macro avg       0.98      0.98      0.98    100000
+weighted avg       0.98      0.98      0.98    100000
+
+
+================================================================================
+MODEL: EMOTION
+================================================================================
+Accuracy:  0.9798
+Precision: 0.9800
+Recall:    0.9798
+F1-Score:  0.9798
+
+Best C: 1.0
+Best class_weight: balanced
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       anger       1.00      0.96      0.98      9566
+ frustration       0.98      0.97      0.98     19023
+         joy       0.99      0.98      0.98     20609
+     neutral       0.97      0.99      0.98     45434
+     sadness       0.98      0.96      0.97      5368
+
+    accuracy                           0.98    100000
+   macro avg       0.98      0.97      0.98    100000
+weighted avg       0.98      0.98      0.98    100000
+
+
+================================================================================
+MODEL: URGENCY
+================================================================================
+Accuracy:  0.9393
+Precision: 0.9417
+Recall:    0.9393
+F1-Score:  0.9396
+
+Best C: 1.0
+Best class_weight: balanced
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        high       0.99      0.97      0.98      7224
+         low       0.89      0.96      0.93     38184
+      medium       0.97      0.92      0.94     54592
+
+    accuracy                           0.94    100000
+   macro avg       0.95      0.95      0.95    100000
+weighted avg       0.94      0.94      0.94    100000
+
+
+================================================================================
+MODEL: TOPIC
+================================================================================
+Accuracy:  0.9315
+Precision: 0.9340
+Recall:    0.9315
+F1-Score:  0.9310
+
+Best C: 0.5
+Best class_weight: None
+
+Classification Report:
+                     precision    recall  f1-score   support
+
+            account       0.99      0.98      0.99      5519
+    billing_payment       0.99      0.98      0.99      7174
+   customer_support       0.90      0.76      0.82     10597
+           delivery       0.99      0.99      0.99      6198
+              other       0.86      0.97      0.91     25360
+            product       0.90      0.94      0.92      5466
+refund_cancellation       1.00      0.99      0.99      7212
+           security       1.00      0.97      0.98      5511
+            service       0.95      0.94      0.95      6508
+  subscription_plan       0.98      0.98      0.98      4827
+          technical       0.95      0.87      0.91     15628
+
+           accuracy                           0.93    100000
+          macro avg       0.96      0.94      0.95    100000
+       weighted avg       0.93      0.93      0.93    100000
+
